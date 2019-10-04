@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flickr feed</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <a href="https://flickr.com">
+      <img src="/img/Flickr_logo.png" alt="">
+    </a>
+    <h1>GET YOUR PICS</h1>
+    <aside>
+      <select name="option" id="pictures">
+        <option value="100">Pics/page</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      <input type="search" placeholder="Search">
+      <button>
+          <ion-icon name="search"></ion-icon>
+      </button>
+    </aside>
+  </header>
+  <main>
+  </main>
+    <section id="overlay">
+      <p>Click anywhere to close</p>
+      <figure>
+        <img src="" alt="">
+      </figure>
+    </section>
+    <footer>
+    <a href="#" id="previous">
+      <button><ion-icon name="arrow-dropleft"></ion-icon></button>
+    </a>
+    <p id="counter"></p>
+    <a href="#" id="next">
+      <button><ion-icon name="arrow-dropright"></ion-icon></button>
+    </a>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>

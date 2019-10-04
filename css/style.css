@@ -1,0 +1,301 @@
+:root{
+    --main-color: rgb(122, 200, 194);
+    --text-color: rgb(216, 255, 252);
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Josefin sans', sans-serif;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+    background: var(--main-color);
+    transition: all .7s ease;
+}
+
+body.fill {
+    background: white;
+    transition: all .7s ease;
+}
+
+header{
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: .5rem; 
+}
+
+header h1{
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 15rem;
+    border-bottom: 3px solid white;
+    color: white;
+    font-weight: 700;
+}
+
+header h1:hover{
+    cursor: pointer;
+}
+
+header aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pictures{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    height: 3rem;
+    border-radius: 9999rem;
+    background: var(--text-color);
+    margin: 1rem;
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    color: var(--main-color);
+}
+
+button{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 9999rem;
+    background: var(--text-color);
+    margin: 1rem;
+    translate: 0%;
+    position: relative;
+}
+
+button:hover{
+    box-shadow: 3px 3px 1rem rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+#pictures:hover{
+    box-shadow: 3px 3px 1rem rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+ion-icon{ 
+   font-size: 2rem;
+    color: var(--main-color);
+}
+
+header aside input{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    font-size: 1.3rem;
+    margin: 1rem;
+    padding: .75rem 1rem;
+    border-radius: 9999rem;
+    width: 18rem;
+    transition: all .5s ease-in-out;
+}
+
+header aside input:focus{
+    outline: none;
+    width: 20rem;
+}
+
+header aside input:focus::placeholder{
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    max-width: 1200px; 
+    margin: 3rem auto;
+}
+
+main img {
+    width: 100%;
+}
+
+main img:hover{
+    box-shadow: 3px 3px 1rem rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.96);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#overlay p{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    margin-top: 1rem;
+}
+#overlay figure {
+    height: 70%;
+    margin: 0;
+    padding: 0;
+}
+
+#overlay figure img {
+    height: 100%;
+}
+
+#overlay.show {
+    display: flex;
+}
+
+a button{
+    background: var(--text-color);
+}
+
+#next{
+    visibility: hidden;
+}
+
+#previous{
+    visibility: hidden;
+}
+
+footer{
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 767px) {
+    
+    body {
+        margin: 0 auto;
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+    }
+
+    header h1{
+        font-size: 1rem;
+        text-align: center;
+        padding: 1rem 4rem;
+        border-bottom: 3px solid white;
+        color: white;
+        font-weight: 700;
+    }
+
+    header img{
+        display: none;
+    }
+
+    header aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    header aside input{   
+        height: 2rem;
+        width: 12rem;
+        transition: all .5s ease-in-out;
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    header aside input:focus{
+        outline: none;
+        width: 13rem;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 3rem auto;
+        max-width: 300px;
+    }
+
+    #overlay figure {
+        max-width: 90%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    #overlay figure img {
+        width: 100%;
+    }
+
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 9999rem;
+        background: var(--text-color);
+        margin: .5rem;
+    }
+    
+    footer p{
+        font-size: .5rem;
+    }
+
+    ion-icon{ 
+        font-size: 1rem;
+    }
+
+    #pictures{
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        outline: none;
+        height: 2rem;
+        border-radius: 9999rem;
+        background: var(--text-color);
+        margin: .5rem;
+        padding: 0 .5rem;
+        font-size: 0.8rem;
+        color: var(--main-color);
+        justify-self: flex-end;
+    }
+
+}
